@@ -139,17 +139,5 @@ for year in [2016,2017,2018,2019]:
     ...
      
     """
+# write out
 df.to_csv("fish.csv")
-
-dfaji = df[df.fishname == "アジ"]
-dfaji.to_csv("aji.csv")
-
-
-# analyze data
-import matplotlib.pyplot as plt
-
-plt.matshow(df.corr())
-plt.show()
-
-
-# visualize data.
