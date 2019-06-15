@@ -1,9 +1,11 @@
 # choka-analysis
 釣りビジョンの釣果をスクレイピング→可視化します
 
-## Requires
+## Requires python library:
 BeautifulSoup
+
 Pandas
+
 seaborn
 
 pipでインスコできます。
