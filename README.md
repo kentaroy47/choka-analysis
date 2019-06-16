@@ -7,14 +7,14 @@ goal: 釣果期待値が高い日を天気、気温などから予測できる�
 
 domain: 本牧海釣り公園。他の海釣り公園へ拡張予定。
 
-## Requires python library:
-BeautifulSoup
+## To start off:
+git cloneしrequirementsをインストールしてください。
 
-Pandas
-
-seaborn
-
-pipでインスコできます。
+```
+git clone https://github.com/kentaroy47/choka-analysis.git
+pip install -r requirements.txt
+cd choka-analysis
+```
 
 ## スクレイピング
 ```
