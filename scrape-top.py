@@ -1,18 +1,12 @@
 
 # import stuff
-from bs4 import BeautifulSoup
-import requests
-import codecs
-import urllib
 import lxml.html as lh
 import pandas as pd
-import datetime
 import numpy as np
 from scraper import fetch_choka_list
 
 def get_person(datas):
     ans = []
-    length = len(datas)
     for data in datas:
         data = str(data)
         for i, d in enumerate(data):
@@ -27,7 +21,6 @@ def get_person(datas):
 
 def get_temp(datas):
     ans = []
-    length = len(datas)
     for data in datas:
         data = str(data)
         for i, d in enumerate(data):
@@ -64,18 +57,15 @@ def convert_to_datetime(time):
 
 df = pd.DataFrame(columns=["date", "people", "temp", "fishname", "fishnum", "fishsize"])
 
-
+# setup for scraping
 url = "https://www.fishing-v.jp/choka/choka_detail.php"
 facility_id = "11284"
 max_page = 1
 
 for page in range(102):
     soup = fetch_choka_list(url, facility_id, max_page=max_page, page_number=page)
-    
-    #fishdate = 30*month
-    #month = "{:02d}".format(month)
-    #year = str(year)
-    
+
+    # scrape choka        
     choka = soup.find_all("tr")
     #print(choka)
     
