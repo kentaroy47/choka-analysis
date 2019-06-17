@@ -8,6 +8,7 @@ import lxml.html as lh
 import pandas as pd
 import datetime
 import numpy as np
+from scraper import fetch_choka_list
 
 def get_person(datas):
     ans = []
