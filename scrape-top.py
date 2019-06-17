@@ -62,14 +62,14 @@ def convert_to_datetime(time):
         day = time[7+offset]
     return year+"/"+month+"/"+day
 
-df = pd.DataFrame(columns=["date", "people", "temp", "fishname", "fishnum", "fishsize", "days"])
+df = pd.DataFrame(columns=["date", "people", "temp", "fishname", "fishnum", "fishsize"])
 
 
 url = "https://www.fishing-v.jp/choka/choka_detail.php"
 facility_id = "11284"
 max_page = 1
 
-for page in range(100):
+for page in range(102):
     soup = fetch_choka_list(url, facility_id, max_page=max_page, page_number=page)
     
     #fishdate = 30*month
