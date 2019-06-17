@@ -17,12 +17,8 @@ cd choka-analysis
 ```
 
 ## スクレイピング
-based on the scraper in 
-
-https://github.com/ohbarye/choka-scraper
-
 ```
-python scrape-top.py
+python scrape-test.py
 ```
 
 ## 解析・可視化
